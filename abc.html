@@ -1,0 +1,270 @@
+̵<html>    
+    <head>
+        <style>
+          body {              
+              padding-left: 20%;
+              padding-right: 20%;
+              font-family: 'Montserrat', sans-serif;
+              font-size: 20px;
+        }  
+        table { 
+            width: 50%;
+            border-collapse: collapse;
+        }
+        td,th {
+            border: 1px dashed black;         
+            padding: 10px;
+            text-align: center;   
+        }
+        ul {
+            list-style-type: square;
+        }        
+        #p1 {
+                border: 3px solid burlywood;
+        }
+        .names {
+            color: rebeccapurple;
+            background-color: rosybrown;
+            border: 3px solid black;
+        }
+        .mybox {
+            border: 1px solid black;
+            /* padding: 5%; */
+            /*padding-left: 45%;*/
+            /* width: 50px; */
+            /* height: 50px; */
+            background-color: aqua;  
+            display: flex;          
+            justify-content: center;
+            align-items: center;
+            flex:1;                       
+        flex-direction: column;
+        align-items: inherit; 
+        }
+        .outerBox {            
+            display: none;
+            flex-direction: row;
+            /* padding: 5%; */
+            border: 10px solid lightcoral;            
+            background-color: lightyellow;
+            margin:10%;            
+        }
+        .innerBoxes{
+            display: flex;
+            flex:1;
+            flex-direction: row;
+            border: 2px solid gray;               
+        }
+        .bordeC{
+            border: 2px solid black;       
+            display: flex;
+            flex-direction: row;        
+            flex:1;
+        }
+        .formContainer{
+            display:flex;
+            border: 1px solid #555555; 
+            padding: 30px;
+            flex-direction: column;
+        }
+        .formFields {
+            display: flex; 
+            /* border: 1px solid black; */
+            padding: 10px;
+            align-items: center;
+            /* padding-right: 30%; */
+        }
+        .inputBoxes{            
+            padding: 12px;
+            flex:5;
+            /* border: 1px dashed black; */
+        }
+        .formLabel{
+               flex:2;
+               /* border: 1px dashed black; */
+        }
+        .moveToRight{
+            justify-content: flex-end;
+        }
+        .niceButton{
+            color: white;
+            background: #4d4d4d;
+            padding: 7px 27px;
+        }
+
+
+        </style>
+        </head>
+        <body>
+        <div style="display: none;">
+            <div>ABC</div>
+            <h1>This is heading 1</h1>
+            <h2>This is heading 2</h2>
+            <h3>This is heading 3</h3>
+            <h4>This is heading 4</h4>
+            <h5>This is heading 5</h5>
+            <h6>This is <strike>heading 6</strike></h6>
+            <p class="names">This is a <strong>para</strong></p>
+            <p class="names" id="p1"><b>Just style me</b></p>
+            <p><i>This is bold</i></p>
+            <p>Super<sup>This is bold</sup></p>            
+            <a href="https://www.google.com/">Take me to Google</a>
+            <br>
+            <br>
+            <h1>My Interesting form</h1>
+            <p>Fill the form</p>
+            <span>Fill the form</span>
+            <span>Fill the form</span>
+            <span>Fill the form</span>
+            <br>
+            <br>
+            <form>
+                <label>User name</label>
+                <input type="text" placeholder="Enter your name">
+                <br>
+                <label>Password</label>
+                <input type="password" placeholder="Enter Password">
+                <br><br>
+                <label>Chose</label>
+                <br>
+                <input type="radio" value="Login">
+                <label>Login</label>
+                <input type="radio" value="SignUp">
+                <label>SignUp</label>
+                <br>
+                <br>
+                <label>Your key interests?</label>
+                <br>
+                <input type="checkbox">
+                <label>Dancing</label>
+                <br>
+                <input type="checkbox">
+                <label>Singing</label>
+                <br>
+                <input type="checkbox">
+                <label>Foot ball</label>
+                <br>
+
+                <select>
+                    <option> Dancing </option>
+                    <option> Singing </option>
+                    <option> Foot ball</option>
+                </select>
+                <br>
+                <br>
+                <label>Comments</label>
+                <br>
+                <textarea rows="5" cols="10">
+                    </textarea>
+
+                <input type="submit">
+            </form>
+            <br>
+            <br>
+            <table>
+                <thead></thead>
+                <tbody>
+                <tr>
+                    <th class="names">User Name</th>
+                    <th>Age</th>
+                    <th>Fav Food</th>
+                </tr>                
+                <tr>
+                    <td class="names">Karishma</td>
+                    <td>25</td>
+                    <td>Pizza</td>
+                </tr>
+                <tr>
+                    <td class="names">Sweta</td>
+                    <td style="background-color:salmon">23</td>
+                    <td>Momo</td>
+                </tr>
+                </tbody>
+            </table> 
+            <br>
+            <br>
+            <h2>Ordered List</h2>            
+            <ol>
+                <li>Parikshit</li>
+                <li>Karishma</li>
+                <li>Sweta</li>
+            </ol>
+            <br>
+            <h2>Un-ordered List</h2>
+                        <ul>
+                            <li>Parikshit</li>
+                            <li>Karishma</li>
+                            <li>Sweta</li>
+                        </ul>
+
+                <h2>Author</h2>  
+                <ul>
+                    <li> jk rowling
+                         <ol>
+                            <li>Philosopher stone</li>
+                            <li>Chamber of Secrets</li>
+                            <li>Goblet of fire</li>
+                        </ol>                   
+                    </li>
+
+                    </ul>    
+        </div>  
+        <div class="outerBox">
+            <div class="innerBoxes">
+            <div class="mybox" style="flex-direction:column;">
+                <div class="bordeC">
+                    <h1>1</h1>
+                </div>
+                <div class="bordeC">
+                    <h1>2</h1>
+                </div>
+                
+            </div>
+            <div class="mybox">
+                <h1>50%</h1>
+            </div>
+            </div>
+
+            <div class="innerBoxes">
+            <div style="flex:3" class="mybox">
+                <h1>30%</h1>
+            </div>
+            <div style="flex:7" class="mybox">
+                 <h1>70%</h1>
+            </div>
+            </div>
+         </div>   
+        <div class="formContainer">
+            <p style="font-size:27px">Registration Form</p>
+            <form style="display:flex; flex-direction: column;">
+                <div class="formFields">
+                    <div style="flex:2">
+                    </div>
+                    <label class="formLabel">
+                        First Name:
+                        </label>
+                        <input type="text" placeholder="First Name" class="inputBoxes">
+                    </div>
+                <div class="formFields">
+                    <div style="flex:2">
+                    </div>
+                    <label class="formLabel">
+                        Last Name:
+                    </label>
+                    <input type="text" placeholder="Last Name" class="inputBoxes">
+                </div>
+                <div class="formFields">
+                    <div style="flex:2">
+                    </div>
+                    <label class="formLabel">
+                        Email:
+                    </label>
+                    <input type="text" placeholder="Email" class="inputBoxes">
+                </div>
+                <div class="formFields moveToRight">
+                    <input type="submit" value="Register" class="niceButton">
+                    </div>                
+                </form>
+        </div> 
+            </body>
+</html>

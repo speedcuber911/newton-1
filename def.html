@@ -1,0 +1,166 @@
+̵<html>
+<head>
+    <style>
+        body {
+            padding-left: 20%;
+            padding-right: 20%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;        
+            background: linear-gradient(pink, lightblue);            
+        }    
+        body .formContainer {
+            display: none;
+            border: 1px solid #555555;
+            padding: 30px;
+            flex-direction: column;            
+        }
+
+        div ~ p {
+            color: red;
+        }
+
+        .formFields {
+            display: flex;
+            /* border: 1px solid black; */
+            padding: 10px;
+            align-items: center;
+            /* padding-right: 30%; */
+        }
+        .inputBoxes {
+            padding: 12px;
+            flex: 5;
+            /* border: 1px dashed black; */
+        }
+        .formLabel {
+            flex: 2;
+            /* border: 1px dashed black; */
+        }
+        .moveToRight {
+            justify-content: flex-end;
+        }
+        .niceButton {
+            color: white;
+            background: #4d4d4d;            
+        }
+
+        .niceButton:hover{
+            background: white;
+            color: #4d4d4d;   
+            cursor: progress;
+        }        
+
+        .register {
+            display: none;
+        }
+        .moveToRight:hover > p {
+            display: block;
+        }
+        #buttonC {
+        padding: 7px 27px;  
+        }
+        .moveToRight>p::first-letter{            
+            color: gray;            
+        }
+        .moveToRight>p::first-line{            
+            font-size: 16px;              
+        }
+        p::before{
+            content: "Hello";
+        }
+        p::after{
+            content: "World";
+        }
+
+        ::marker{
+            color:gray;
+            font-size: larger;
+        }
+
+        p::selection{
+            color:red;
+            background: yellow;            
+        }
+        
+        @media screen and (max-width: 600px){
+            body{
+                font-size: 12px;       
+                background: aqua;  
+            }
+        }
+
+    </style>
+</head>
+
+<body>    
+    <div style="display: block;" class="para">
+        <p>
+            // Combinators <<--- 1. Descendant selector (space between the 2 selectors) 
+                2. Child selector (">" between' the 2
+                selectors)
+                3. Adhancent sibling selector ("+" between selectors)
+                4. General sibling selector ("~")            
+                // Pseudo classes
+            </p>
+    </div>
+
+    <p>
+        - Width and height of the viewport
+        - Width and height of the device
+        - orientation of device
+        - resolution
+    </p>
+    <p class="bodyP formContainer">This is body wala P <br> We will make changes here</p>
+    <div class="formContainer">
+        <p style="font-size:27px">Registration Form</p>
+        <p style="font-size:27px">This is a sample form</p>
+        <form style="display:flex; flex-direction: column;">
+            <div class="formFields">
+                <div style="flex:2">
+                </div>
+                <label class="formLabel">
+                    First Name:
+                </label>
+                <input type="text" placeholder="First Name" class="inputBoxes">
+            </div>
+            <div class="formFields">
+                <div style="flex:2">
+                </div>
+                <label class="formLabel">
+                    Last Name:
+                </label>
+                <input type="text" placeholder="Last Name" class="inputBoxes">
+            </div>
+            <div class="formFields">
+                <div style="flex:2">
+                </div>
+                <label class="formLabel">
+                    Email:
+                </label>
+                <input type="email" placeholder="Email" class="inputBoxes">
+            </div>
+            <div class="formFields moveToRight">
+                <input type="submit" value="Register" class="niceButton" id="buttonC">
+                <p class="register">This is Register button</p>
+            </div>
+            <p>My new inner para</p>
+        </form>
+    </div>
+    <div class="formContainer">
+    <p>My new para</p>
+    <p>My new para2</p>
+    </div>
+    <div style="display: flex;border: 1px solid black;">
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        </div>
+</body>
+
+</html>
