@@ -19,7 +19,7 @@ function clickMe() {
 function doSomething(){
     let a;    
     a = 5;
-
+    
     var c;
     c = 7;
     // Equal sign '=' is called assignment operator
@@ -59,7 +59,6 @@ function variables(){
     var mySpecialVar = "special";    
     console.log(mySpecialVar)
 }
-
 /* Let keyword
     1. Cannot be re declared
 
@@ -104,7 +103,7 @@ function variables(){
 
     {
         const x = 2;
-    }
+    }        
     const x = 3;
     {
         const x  = 5;
@@ -119,5 +118,42 @@ function variables(){
     Valid:
         let def;
         def = 40;  
+*/
+
+/*
+    Operators
+    1. Arithematic operators
+        -> +,-,/,*,
+        -> **, %, ++, --
+        2**3 = 8(power of operator)
+        16%5 = 1 (Modulus operator)
+        let x = 5;
+        x++; X becomes 6 | Equivalent of saying x = x+1
+        x--; X becomes 5 again | Equivalent of saying x = x-1
+    2. Assignment operators
+        -> = 
+        -> += |  x = x+1, x+=1
+        -> -= |  x = x-1, x-=1 
+        -> /= |  x = x/1, x/=1 
+        -> *=
+        -> %=
+        -> **= |  x = x**2, x**=2 
+    3. Comparison operators
+        ->  == equal to operator
+        ->  === exact equality operator
+        -> != not equal to operator 
+        -> !==  exact not equal to operator 
+        -> > greater than 
+        -> < less than 
+        -> >= greater than equal to
+        -> <= less than equal to
+    4. Logical operators
+        -> && AND operator
+        -> || OR operator
+        -> ! operator        
+*/
+
+/* 
+Printing the table of 2
 
 */
