@@ -3,7 +3,7 @@
 // document.write
 // window.alert
 // console.log
-function clickMe() {
+// function clickMe() {
 //   document.write("My first JS program");
 //   document.getElementsByClassName("gridChild2")[0].innerText =
 //     "Loading from external file";
@@ -14,7 +14,7 @@ function clickMe() {
 //   let b = 6;
 //   let c = a + b;
 //   console.log(c);
-}
+// }
 
 function doSomething(){
     let a;    
@@ -155,5 +155,45 @@ function variables(){
 
 /* 
 Printing the table of 2
+ console.log(2*1)
+ console.log(2*2)
+ console.log(2*3)
+ console.log(2*4)
+
+ // for loop
+ for(let i=0;i<10;i++){
+     console.log("Hi");
+ }
+
 
 */
+
+let numberOfSingleClicks = 0;
+
+function clickMe(){
+    numberOfSingleClicks++;        
+    if(numberOfSingleClicks%2 == 0){    
+        document.getElementById('item1').style.fontWeight = 'bolder';
+    }
+    else{
+        document.getElementById('item1').style.fontWeight = '400';
+    }
+
+    if(numberOfSingleClicks <= 2){  
+        document.getElementById('item1').style.color = "green"
+    }    
+    else if(numberOfSingleClicks>2 && numberOfSingleClicks <= 6 ){        
+        document.getElementById('item1').style.color = "blue"
+    }
+    else if(numberOfSingleClicks >6 && numberOfSingleClicks <= 10){        
+        document.getElementById('item1').style.color = "orange"
+    }
+    else if(numberOfSingleClicks > 10){        
+        document.getElementById('item1').style.color = "red"
+    }
+    else{
+        console.log("This happened");
+    }
+
+    document.getElementById('item1').innerText = "No. of times clicked:" + numberOfSingleClicks;
+}
