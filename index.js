@@ -171,15 +171,9 @@ Printing the table of 2
 let numberOfSingleClicks = 0;
 
 function clickMe(){
-    numberOfSingleClicks++;        
-    if(numberOfSingleClicks%2 == 0){    
-        document.getElementById('item1').style.fontWeight = 'bolder';
-    }
-    else{
-        document.getElementById('item1').style.fontWeight = '400';
-    }
-
-    if(numberOfSingleClicks <= 2){  
+    numberOfSingleClicks++; 
+           
+    if(numberOfSingleClicks <= 2 || numberOfSingleClicks%2 == 0){  
         document.getElementById('item1').style.color = "green"
     }    
     else if(numberOfSingleClicks>2 && numberOfSingleClicks <= 6 ){        
@@ -195,5 +189,82 @@ function clickMe(){
         console.log("This happened");
     }
 
+    if(numberOfSingleClicks%2 == 0){    
+        document.getElementById('item1').style.fontWeight = 'bolder';
+    }
+    else{
+        document.getElementById('item1').style.fontWeight = '400';
+    }
+
     document.getElementById('item1').innerText = "No. of times clicked:" + numberOfSingleClicks;
 }
+
+
+//JS topics covered
+/*
+1. Intro to JS
+    1. JS in the browser
+    2. JS can update DOM    
+2. Structure of a program in JS
+3. Variables, literal and identifiers in JS 
+4. Deep diving into Variables, difference betweeen let, const and var
+5. Operators in JS
+    1. Arithematic operators
+    2. Assignment operators
+    3. Comparison operators
+    4. Logical operators
+6. Control flow in JS programs
+    1. if, else-if, else and if/else ladder
+    2. Loops in JS
+        1. For loop
+*/
+
+// Print the first 50 fib numbers
+function fib(){     
+    let tNth, tNthMinus1=1, tNthMinus2=0;    
+    console.log(tNthMinus2);
+    console.log(tNthMinus1);        
+    for(let i=0;i<48;i++){                
+        tNth = tNthMinus2 + tNthMinus1;
+        console.log(tNth);
+
+        tNthMinus2 = tNthMinus1;
+        tNthMinus1 = tNth;        
+    }    
+}
+// 52 terms
+
+function tableOf3(){    
+    for(let i=0;i<10;i++){
+        console.log(3*(i+1));
+    }
+}
+
+/* The While loop
+
+    while(<Condition>){
+
+    }
+    
+    function tableOf3WithWhile(){
+        let i=1;
+        while(i<=10){        
+            i++;
+        }
+    }
+    function printSomething(){        
+        let streamLetter = 'a';
+        while(streamLetter!='p'){
+
+            //Logic here for changing stream letter
+        }
+    }
+*/
+
+/*
+ Print the type of each element in the array 
+ let x = ['a', 'b', 'c', 1, 2, 3, true, false]; 
+ for(let i=0;i<x.length;i++){
+     console.log(typeof x[i]);
+ }
+*/
