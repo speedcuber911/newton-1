@@ -268,3 +268,114 @@ function tableOf3(){
      console.log(typeof x[i]);
  }
 */
+
+/*
+Arrays as on 21-12-2021
+1. Accessing an element from an array 
+2. Pushing data/element to an array
+// 4th element arr[3]
+
+let arr = [1,2,3,4,5,6]
+->make this [2,4,6,8,10,12]
+double elements in the array 
+for(let i=0;i<arr.length;i++) 
+    arr[i]*=2;
+        
+// Add first 10 natural numbers to an empty array
+let arr = [];
+for(let i=0;i<10;i++){
+    arr.push(i+1)    
+}
+
+let i=1;
+while(i<=10){    
+    arr.push(i);
+    i++;
+}
+
+// Sum of all elements in the array 
+let arr = [1,2,3,4,5,6,7,8,9,10]
+let sum =0;
+for(let i=0;i<arr.length;i++){
+    sum+=arr[i];
+}
+console.log(sum);
+
+// Find sum of all elements of the array, if that sum is even.
+// Print 'event' otherwise print 'odd'
+let arr = [1,2,3,4,5,6,7,8,9,10]
+let sum =0;
+for(let i=0;i<arr.length;i++){
+    sum+=arr[i];
+}
+
+// ternary 
+// Syntax 
+// <Condition>?<Statement1>:<Statement2>
+
+let arr = [1,2,3,4,5,6,7,8,9,10]
+let sum =0;
+for(let i=0;i<arr.length;i++){
+    sum+=arr[i];
+}
+(sum%2==0)?console.log('even'):console.log('odd');
+if(sum%2==0)
+    console.log('even');
+else
+    console.log('odd');
+
+// Array unshift equivalent of push 
+let arr = []
+for(let i=0;i<10;i++){
+    arr.unshift(i+1)    
+}
+// [10,9,8,7,6,5,4,3,2,1] 
+
+
+// arr = [10,9,8,7,6,5,4,3,2,1] 
+// Remove last 3 elements from the array
+for(let i=0;i<n;i++)    
+        arr.pop();
+
+// shift for removing elements from start        
+
+// Remove 3 elements from both start and end of the array 
+for(let i=0;i<n;i++){
+    arr.shift();
+    arr.pop();
+}
+
+// Reverse of an array 
+let arr = [1,2,3,4,5];
+arr.reverse();
+let arr2=[];
+for(let i=0;i<arr.length;i++){
+    arr2.unshift(arr[i]);
+}
+
+// Join
+let arr = [1,2,3,4,5];
+'12345'
+let str = '';
+for(let i=0;i<arr.length;i++)
+    str = str+arr[i]
+
+// Concat
+let arr1 = [1,2,3], arr2 = [4,5,6]
+[1,2,3,4,5,6]
+arr1.concat(arr2);
+
+// Finding an element in the array 
+let num = 12;
+let arr = [1,2,3,4,5,11,15,17,18,31];
+let ajay=0;
+for(let i=0;i<arr.length;i++){
+    if(arr[i] === num){          
+        ajay = 1;
+    }    
+}
+(ajay==0)?console.log('Does not exist'):console.log("Exists");
+
+arr.includes(num)
+
+*/
