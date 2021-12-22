@@ -377,5 +377,51 @@ for(let i=0;i<arr.length;i++){
 (ajay==0)?console.log('Does not exist'):console.log("Exists");
 
 arr.includes(num)
-
 */
+/*
+reverse push, pop, shift, unshift, join
+
+slice
+let arr = [1,2,3,4,5,6];
+arr.slice(0,3) // Last element is not considered
+let x = 2, y=4;
+let newArr = []
+for(let i=x;i<y;i++){
+    newArr.push(arr[i])
+}
+splice
+*/
+/*
+ Functions
+*/
+
+function sayHello(){    
+    for(let i=0;i<3;i++)
+        console.log("Hello",i);
+}
+sayHello();
+
+function sayHelloTo(name){    
+    console.log("Hello", name)
+}
+
+function sayHelloToPeople(people){    
+    for(let i=0;i<people.length;i++){
+        console.log("Hello", people[i],"!")        
+    }
+}
+
+/*
+Write a function which takes a number and prints it's table
+*/
+
+function printTable(number, till){
+    for(let i=0;i<till;i++){
+        console.log(number*(i+1));
+    }
+}
+
+function printTwoTables(number1, number2){
+
+}
+printTwoTables(2,3)
