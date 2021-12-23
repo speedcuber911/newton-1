@@ -399,16 +399,15 @@ function sayHello(){
     for(let i=0;i<3;i++)
         console.log("Hello",i);
 }
-sayHello();
+// sayHello();
 
 function sayHelloTo(name){    
     console.log("Hello", name)
 }
 
 function sayHelloToPeople(people){    
-    for(let i=0;i<people.length;i++){
-        console.log("Hello", people[i],"!")        
-    }
+    for(let i=0;i<people.length;i++)
+        console.log("Hello", people[i],"!")            
 }
 
 /*
@@ -420,8 +419,33 @@ function printTable(number, till){
         console.log(number*(i+1));
     }
 }
-
 function printTwoTables(number1, number2){
-
+    for(let i=0;i<10;i++){
+        console.log("Number1", number1*(i+1), "Number2", number2*(i+1))
+    }
 }
-printTwoTables(2,3)
+// printTwoTables(2,3)
+
+let multiplyWithMe = 60;
+
+function multiplyTheseTwoNumbers(num1, num2){    
+    console.log(multiplyWithMe);
+    return num1*num2;
+}
+/*
+    Difference between parameters and arguments
+    multiplyTheseTwoNumbers(4,5)
+*/
+
+let myProduct = multiplyTheseTwoNumbers(4,5);
+console.log(myProduct);//20
+
+/*
+Typed Coercion
+
+let a = 5;
+let b = 5;
+let c = a+b;
+console.log(c)
+
+*/
