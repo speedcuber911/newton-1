@@ -428,7 +428,7 @@ function printTwoTables(number1, number2){
 
 let multiplyWithMe = 60;
 
-function multiplyTheseTwoNumbers(num1, num2){    
+function multiplyTheseTwoNumbers(num1, num2=1){
     console.log(multiplyWithMe);
     return num1*num2;
 }
@@ -447,5 +447,66 @@ let a = 5;
 let b = 5;
 let c = a+b;
 console.log(c)
-
 */
+
+/*
+    Objects
+    Car object
+    Properties
+    - Color
+    - model
+    - topSpeed
+    - EngineSize
+    Behaviours
+    - Start
+    - brake
+    - drive
+
+    const myCar = {
+        color: "blue",
+
+
+
+        model: "C-class",
+
+        weight: "2000"
+    };
+
+     const RVsCar = {
+        color: "white",
+        model: "E-class",
+        weight: "2200" // Kgs
+    };
+ */
+
+/*
+    Functions as first class in JS
+function sayHello(name){
+    console.log("Hello ", name)
+}
+sayHello()
+sayHello("Parikshit")
+const greet = sayHello // Functional expression
+greet("Sirajul")
+
+const sayHelloToMe = function(name) {// Functional expression
+    console.log("Hello ", name)
+}
+functions in function expressions are called anonymous functions. As they have no name
+ */
+
+/*
+    Arrow functions
+    function product(p1,p2) {
+        return p1*p2;
+    }
+    const product = (p1,p2) => {
+        console.log("I am going to return the product");
+        return p1*p2;
+    }
+    const product = (p1,p2) => p1*p2;
+
+    if()
+
+
+ */
