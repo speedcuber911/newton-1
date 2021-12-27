@@ -428,7 +428,7 @@ function printTwoTables(number1, number2){
 
 let multiplyWithMe = 60;
 
-function multiplyTheseTwoNumbers(num1, num2=1){
+function multiplyTheseTwoNumbers(num1, num2){    
     console.log(multiplyWithMe);
     return num1*num2;
 }
@@ -447,66 +447,26 @@ let a = 5;
 let b = 5;
 let c = a+b;
 console.log(c)
+
+1. String conversion (In case of + operator)
+Whatever you add to a string becomes a string (Number, Boolean)
+
+2. NUmber conversion (IN case of -,%,/ operators)
+
+3. Boolean to Number
+false -> 0
+true -> 1
+
 */
 
-/*
-    Objects
-    Car object
-    Properties
-    - Color
-    - model
-    - topSpeed
-    - EngineSize
-    Behaviours
-    - Start
-    - brake
-    - drive
+mirrorMaze(mirror, "Tarun")
+function mirrorMaze(mirrorMe, normalString){
 
-    const myCar = {
-        color: "blue",
-
-
-
-        model: "C-class",
-
-        weight: "2000"
-    };
-
-     const RVsCar = {
-        color: "white",
-        model: "E-class",
-        weight: "2200" // Kgs
-    };
- */
-
-/*
-    Functions as first class in JS
-function sayHello(name){
-    console.log("Hello ", name)
+    console.log("Reverse of", normalString, "is", mirrorMe(normalString))
 }
-sayHello()
-sayHello("Parikshit")
-const greet = sayHello // Functional expression
-greet("Sirajul")
-
-const sayHelloToMe = function(name) {// Functional expression
-    console.log("Hello ", name)
+let mirror = (str) => (str.split('').reverse().join(''))
+function mirrorMaze(mirrorMe, siddiq){
+    console.log("Reverse of", siddiq, "is", mirrorMe(siddiq))
 }
-functions in function expressions are called anonymous functions. As they have no name
- */
-
-/*
-    Arrow functions
-    function product(p1,p2) {
-        return p1*p2;
-    }
-    const product = (p1,p2) => {
-        console.log("I am going to return the product");
-        return p1*p2;
-    }
-    const product = (p1,p2) => p1*p2;
-
-    if()
-
-
- */
+mirrorMaze(mirror, "Tarun")
+mirror('mayank')
