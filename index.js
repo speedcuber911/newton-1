@@ -470,3 +470,38 @@ function mirrorMaze(mirrorMe, siddiq){
 }
 mirrorMaze(mirror, "Tarun")
 mirror('mayank')
+
+/*
+    Functions of an object OR, keys of an object which are functions are called methods
+    Array iterative methods
+
+    Callback function
+    1. forEach method
+    Print the number of odd Numbers in the array
+    arr.forEach((elem, index) => {
+    if(elem%2==1)
+        console.log(elem, "is at index", index);
+    })
+    Count the number of odd Numbers in the array
+    let countNumberOfOdds = 0;
+arr.forEach((elem, index) => {
+    if(elem%2==1){
+       countNumberOfOdds++;
+        console.log(elem, "is at index", index);
+    }
+})
+    2. filter
+    cars.filter(car => {
+    if(car.hp>=2)
+        return true;
+})
+
+arr.filter((ele,index) => {
+    if(index%2==0)
+         return true;
+})
+    3. map
+    cars.map(car => car.name)
+    nums = [1,2,3,4,5] // Multiply each element by 3
+    nums.map(ele => 3*ele)
+ */
