@@ -503,5 +503,34 @@ arr.filter((ele,index) => {
     3. map
     cars.map(car => car.name)
     nums = [1,2,3,4,5] // Multiply each element by 3
-    nums.map(ele => 3*ele)
+    nums.map(ele => 3*ele)    
+    Converting original array of numbers to array of objects with value as Mod of 3
+    arr.map( (el,i) => ({position:i, value: el%3}))
+
+    4. find
+
+    let cars=[{name:"A", hp:5}, {name:"B", hp:3}, {name:"C", hp:2}, {name:"D", hp:8}, {name:"E", hp:7}, {name:"F", hp:0}, {name:"G", hp:9}]
+    let myCar = cars.find(car => (car.hp==0))
+    arr.find(el => (el===7))
+
+    5. findIndex
+    Works exactly like find, returns index instead of element.
+
+    6. some 
+    Finding if their is some element which is disvisble by 2
+    arr.some(el => el%2==0)
+
+    7. every
+        arr.every(el => el%2==0) // Checks if every element is even or not
+
+    8. reduce    
+
+    Has 4 parameters in the callback function
+    1. accumulation
+    2. element
+    3. index
+    4. array 
+
+
  */
+
