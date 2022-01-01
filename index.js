@@ -530,7 +530,72 @@ arr.filter((ele,index) => {
     2. element
     3. index
     4. array 
+    
+    let initialVal = 0;
+    let arr = [1,2,3,4,5]
+    // summing up elements
+    
+    const sum = arr.reduce((acc,element) => {       
+     return (acc+element);
+    },initialVal)
 
+    console.log(sum)//6
 
+    // Get all odd elements from an array using reduce
+    let arr = [1,2,3,4,5]
+    arr.reduce((acc,el) => {
+        if(el%2==1){ 
+            acc.push(el);   // [1,3]
+        }
+       return acc; 
+    }, [])  
  */
+/*
+    Closures    
+
+    let myGlobalVar = 1;
+    function addOne(){
+        let myVar = 1;
+        console.log(myGlobalVar);
+        return (myVar+1);
+    }
+    addOne();
+    console.log(myGlobalVar);
+
+    function addOneToNumber(num){
+        return num+1;                          
+    }
+    console.log(addOneToNumber(3))
+
+    function addNumberToNumber(num1){
+        return function (num2) { 
+            return num1+num2;
+        }
+    }    
+    const addNumberToNumber = (num1) => (num2) => num1+num2;    
+    const add1ToNumber = addNumberToNumber(1)
+    const add2ToNumber = addNumberToNumber(2)
+    const add3ToNumber = addNumberToNumber(3)
+    add1ToNumber(9)
+    add2ToNumber(8)
+    add3ToNumber(7)
+
+    function sayHello(){
+        let name = "Amit";
+        function displayHello(){
+            console.log("Hello", name);
+        }
+        displayHello();
+    }   
+    
+   function sayHello(){
+        let name = "Amit";
+        return function (){
+            console.log("Hello", name);
+        }        
+    }
+   
+
+
+*/
 
