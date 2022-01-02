@@ -567,15 +567,22 @@ arr.filter((ele,index) => {
     }
     console.log(addOneToNumber(3))
 
-    function addNumberToNumber(num1){
+    function addNumberToNumber(num1)
+    {    
         return function (num2) { 
             return num1+num2;
         }
     }    
-    const addNumberToNumber = (num1) => (num2) => num1+num2;    
+    const addNumberToNumber = (num1) =>  (num2) => num1+num2;  
+    
+    addNumberToNumber(10)// function 
+    addNumberToNumber(10)(12)
+
+
     const add1ToNumber = addNumberToNumber(1)
     const add2ToNumber = addNumberToNumber(2)
     const add3ToNumber = addNumberToNumber(3)
+
     add1ToNumber(9)
     add2ToNumber(8)
     add3ToNumber(7)
@@ -587,15 +594,50 @@ arr.filter((ele,index) => {
         }
         displayHello();
     }   
-    
+
    function sayHello(){
         let name = "Amit";
         return function (){
             console.log("Hello", name);
         }        
     }
-   
-
+    // lexical/block (let/const)
+    // functional scope (var)
+    sayHello()() //
 
 */
+
+/*
+    Math
+    Math has constants/Properties
+
+    Math has behaviors/functions
+
+    1. Math.round -> rounds off
+    2. Math.ceil -> computes ceiling of a decimal
+    3. Math.floor -> computes floor of a decimal
+    4. Math.trunc -> eliminate the decimal portion
+    5. Math.sign -> Returns -1/1 depending on -ve or +ve number
+    6. Math.pow -> Raise to power. Works exactly like "**" operator
+    7. Math.sqrt -> square root function
+    8. Math.abs for absolute value
+    9. Math.min and Math.max takes numbers as arguments
+    10. Math.random gives a random decimal between 0 and 1.
+
+
+    // Create a funtion which returns a random value between a & b
+
+    function getRandomBetween(a,b){        
+
+    }
+
+    getRandomBetween(1,100);
+
+    0 < Math.random() < 1
+
+    0 < Math.random()*100 < 100
+
+*/
+
+
 
