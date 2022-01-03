@@ -605,6 +605,15 @@ arr.filter((ele,index) => {
     // functional scope (var)
     sayHello()() //
 
+    function myName(name){
+        if(name.length > 5) {
+            var nameLength = name.length;
+            let twiceOfNameLength = nameLength*2;
+            console.log("You have long name",nameLength,twiceOfNameLength);
+        }
+        console.log(nameLength,twiceOfNameLength)
+    }
+
 */
 
 /*
@@ -625,7 +634,7 @@ arr.filter((ele,index) => {
     10. Math.random gives a random decimal between 0 and 1.
 
 
-    // Create a funtion which returns a random value between a & b
+    // Create a function which returns a random value between a & b
 
     function getRandomBetween(a,b){        
 
@@ -639,5 +648,59 @@ arr.filter((ele,index) => {
 
 */
 
+/*
+    Dates
+    1. epoch timestamp
+      represents the milliseconds elapsed since 1970
+      Date.now();
+    2.
+        new Date() // Gives current date
+        new Date(2020,01,20, 21, 30,30) // time/calendar parameters. 20, Feb 2020 // Month is 0 indexed
+        new Date('') // ISO date "2022-01-26T13:15:00" // Month is not 0 indexed here
+        new Date(epochTime) //
+
+        Getting to any date format by the means of string concatenation
+
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+Tue Dec 01 2020 00:00:00 GMT+0530 (India Standard Time)
+"1 December, Tueday 2020"
+'1 December, Tueday 2020'
+t.getDay()
+2
+days[t.getDay()]
+'Tuesday'
+let day = days[t.getDay()]
+'Tuesday'
+let month = "December"
+let date = t.getDate()
+"1 December, Tueday 2020"
+'1 December, Tueday 2020'
+date+ " " + month + ", " + day + " " + t.getFullYear()
+'1 December, Tuesday 2020'
+"01/12/2020"
+'01/12/2020'
+date + "/" + t.getMonth()+1 + "/" + t.getFullYear()
+date + "/" + (t.getMonth()+1) + "/" + t.getFullYear()
+'1/12/2020'
+t.getUTCMonth()
+10
+t.getHours()
+0
+
+// .momentJS
+
+    function giveTheNextDate(date){
+    let epochForTomorrow = date.getTime() + 24*60*60*1000;
+    let dateForTomorrow = new Date(epochForTomorrow)
+
+    let year = dateForTomorrow.getFullYear();
+    let month = dateForTomorrow.getMonth() + 1;
+    let day = dateForTomorrow.getDate();
+    return year + "-" + month + "-" + day
+    }
+    const today = new Date();
+    // -> giveTheNextDate(today)
+
+ */
 
 
