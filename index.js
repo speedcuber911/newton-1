@@ -686,9 +686,7 @@ t.getUTCMonth()
 10
 t.getHours()
 0
-
 // .momentJS
-
     function giveTheNextDate(date){
     let epochForTomorrow = date.getTime() + 24*60*60*1000;
     let dateForTomorrow = new Date(epochForTomorrow)
@@ -700,6 +698,58 @@ t.getHours()
     }
     const today = new Date();
     // -> giveTheNextDate(today)
+ */
+/*
+    const car = {
+        color:'red',
+        engineCC: 1000,
+        weight: 900,
+        type:"sedan"
+    };
+    function stringifyCar(car){
+       return "color:"+car.color+ ",engineCC:" +car.engineCC +",weight:" + car.weight;
+    }
+
+    function stringifyCarImproved(car){
+       let carKeys = Object.keys(car);
+       let finalAnswer = [];
+       carKeys.forEach((ele,i) => {
+            finalAnswer.push(ele+":"+car[ele]);
+       })
+       return finalAnswer.join(',');
+    }
+
+    const stringifyCarFurtherImproved = (car) => Object.keys(car).reduce((acc,ele) => {
+        acc.push(ele+":"+car[ele])
+        return acc;
+       },[]).join(',')
+
+const stringifyCarFurtherImproved = (car) =>
+        Object.keys(car).reduce((acc,ele) => {
+            acc += (ele+":"+car[ele])
+            return acc;
+           },'')
+
+ const stringifyCarFurtherImproved = (car) =>
+        Object.keys(car).reduce((acc,ele) =>
+            acc + (ele+":"+car[ele]+",") ,'')
+
+const stringifyUsingEntries = car => Object.entries(car).map(el => el[0]+":"+el[1]).join(',')
+JSON.stringify(car) // to get a stringified view of object
+
+-> Constructor functions
+Date.now()
+Math.floor()
+Object.keys()
+
+new Date()
+
+function createCar(color, size, engine){
+    return {
+        color, size, engine
+    };
+}
+
 
  */
 
