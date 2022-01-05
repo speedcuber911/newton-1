@@ -750,6 +750,64 @@ function createCar(color, size, engine){
     };
 }
 
+// Getting to a constructor function
+    function createCar(color, size, engine){
+    return {
+        color,
+        size:size,
+        engine,            
+    };    
+}
+
+// Applying default properties
+function createCar(color, size, engine, applyAutoBreaks){
+    return {
+        color,
+        size:size,
+        engine,    
+        drive: () => console.log('drive'),
+        horn: () => console.log('Peep-peep'),
+        applyAutoBreaks
+    };    
+}
+
+// constructor function
+function car(color, size, engine){             
+    this.color = color;
+    this.size = size;
+    this.engine = engine                    
+}
+
+
+// Internal working of constructor functions
+
+// constructor function
+// 1st use-case of "this"
+function car(color, size, engine){ 
+    // this = {}             
+    this.color = color;
+    this.size = size;
+    this.engine = engine            
+    // return this
+}
+
+const car = {
+  color: "red",
+  fuel : 10,  
+  drive() {
+    console.log(this);// "this" here refers to owning object
+  }
+};
+
+const car = {
+  color: "red",
+  fuel : 10,  
+  drive() {
+    this.fuel = this.fuel-1;
+    console.log("Fuel reduced to", this.fuel)
+    return this.fuel
+  }
+};
 
  */
 
