@@ -810,5 +810,81 @@ const car = {
 };
 
  */
+/*
+
+    Accessor methods in objects
+        - Setters (Setting some value)
+        - Getters (Getting some value)
+
+const car = {
+  color: "red",
+  fuel : 10,
+  name: "M3"
+};
+
+console.log(car.name)
+
+// setter function
+const car = {
+  color: "red",
+  fuel : 10,
+  name: "M3",
+  power://
+  terrain: //,
+  fuelType: //
+  set carName(newName) {
+    this.name = newName
+},
+ get fullName(){
+    this.name+ this.color
+ },
+get computedMilleage(){
+        ...
+       return
+ },
+ computeMilleage () {
+
+ }
+  updateName(newName) {
+    this.name = newName;
+    return this.name
+}
+car.carName = "C7"
+car.updateName("C7")
+car.computedMilleage
+car.computeMilleage()
+};
+ */
+
+/*
+    String methods
+    let name = "abcDefghi";
+
+    slice and substr (Any string methods will not mutate(change) the original string)
+    - slice takes start and end indexes. Can take negative values
+    - substr takes start index and number of characters to be extracted. Cannot take negative values
+
+ substring is simillar to slice
+ - starting index and ending index. Does not take negative values
+
+- replace
+- replaceAll
+- toUpperCase
+- toLowerCase
+
+function convertFirstCharToUpper(name){
+//
+    return name.substr(0,1).toUpperCase()+sentence.slice(1) .toLocaleLowerCase()
+}
+convertFirstCharToUpper('parikshit')
+// Parikshit
+- concat method
+- trim
+- padStart & padEnd
+
+- Template literal :`The day has ${24*60*60} seconds`
+ */
+
+
 
 
