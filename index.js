@@ -17,24 +17,24 @@
 // }
 
 function doSomething(){
-    let a;    
+    let a;
     a = 5;
-    
+
     var c;
     c = 7;
     // Equal sign '=' is called assignment operator
 
     // Arithematic operators
-    let product  = c*a;    
-    let sum  = c+a;    
-    let difference  = c-a;    
-    let multiplier  = c/a;    
+    let product  = c*a;
+    let sum  = c+a;
+    let difference  = c-a;
+    let multiplier  = c/a;
 
     let b = 1;
     b = b+1;
     // console.log(product, sum, difference, multiplier)
 
-    // Expressions    
+    // Expressions
     let expressionVal = 5*b+sum-product;
     console.log(expressionVal)
 
@@ -50,13 +50,13 @@ function variables(){
     // var name; // declaring
     // name = 'Gaurav' // Assigning
     var name  = "Gaurav";
-    console.log(name) //     
-    var firstName = "FirstName", 
+    console.log(name) //
+    var firstName = "FirstName",
     secondName="SecondName",
     _class = 10;
     console.log(firstName, secondName, _class);
     var mySpecialVar;
-    var mySpecialVar = "special";    
+    var mySpecialVar = "special";
     console.log(mySpecialVar)
 }
 /* Let keyword
@@ -87,7 +87,7 @@ function variables(){
     x=5;
 
     3. Cannot be hoisted
-     
+
     function abc(){
         carName = 'abc';
         let x = 5*3;
@@ -103,21 +103,21 @@ function variables(){
 
     {
         const x = 2;
-    }        
+    }
     const x = 3;
     {
         const x  = 5;
     }
     2. Must be initialised at the time of declration
-        
+
     Valid:
         const abc = 10;
     Invalid:
         const abc;
-        abc = 30  
+        abc = 30
     Valid:
         let def;
-        def = 40;  
+        def = 40;
 */
 
 /*
@@ -131,29 +131,29 @@ function variables(){
         x++; X becomes 6 | Equivalent of saying x = x+1
         x--; X becomes 5 again | Equivalent of saying x = x-1
     2. Assignment operators
-        -> = 
+        -> =
         -> += |  x = x+1, x+=1
-        -> -= |  x = x-1, x-=1 
-        -> /= |  x = x/1, x/=1 
+        -> -= |  x = x-1, x-=1
+        -> /= |  x = x/1, x/=1
         -> *=
         -> %=
-        -> **= |  x = x**2, x**=2 
+        -> **= |  x = x**2, x**=2
     3. Comparison operators
         ->  == equal to operator
         ->  === exact equality operator
-        -> != not equal to operator 
-        -> !==  exact not equal to operator 
-        -> > greater than 
-        -> < less than 
+        -> != not equal to operator
+        -> !==  exact not equal to operator
+        -> > greater than
+        -> < less than
         -> >= greater than equal to
         -> <= less than equal to
     4. Logical operators
         -> && AND operator
         -> || OR operator
-        -> ! operator        
+        -> ! operator
 */
 
-/* 
+/*
 Printing the table of 2
  console.log(2*1)
  console.log(2*2)
@@ -171,25 +171,25 @@ Printing the table of 2
 let numberOfSingleClicks = 0;
 
 function clickMe(){
-    numberOfSingleClicks++; 
-           
-    if(numberOfSingleClicks <= 2 || numberOfSingleClicks%2 == 0){  
+    numberOfSingleClicks++;
+
+    if(numberOfSingleClicks <= 2 || numberOfSingleClicks%2 == 0){
         document.getElementById('item1').style.color = "green"
-    }    
-    else if(numberOfSingleClicks>2 && numberOfSingleClicks <= 6 ){        
+    }
+    else if(numberOfSingleClicks>2 && numberOfSingleClicks <= 6 ){
         document.getElementById('item1').style.color = "blue"
     }
-    else if(numberOfSingleClicks >6 && numberOfSingleClicks <= 10){        
+    else if(numberOfSingleClicks >6 && numberOfSingleClicks <= 10){
         document.getElementById('item1').style.color = "orange"
     }
-    else if(numberOfSingleClicks > 10){        
+    else if(numberOfSingleClicks > 10){
         document.getElementById('item1').style.color = "red"
     }
     else{
         console.log("This happened");
     }
 
-    if(numberOfSingleClicks%2 == 0){    
+    if(numberOfSingleClicks%2 == 0){
         document.getElementById('item1').style.fontWeight = 'bolder';
     }
     else{
@@ -204,9 +204,9 @@ function clickMe(){
 /*
 1. Intro to JS
     1. JS in the browser
-    2. JS can update DOM    
+    2. JS can update DOM
 2. Structure of a program in JS
-3. Variables, literal and identifiers in JS 
+3. Variables, literal and identifiers in JS
 4. Deep diving into Variables, difference betweeen let, const and var
 5. Operators in JS
     1. Arithematic operators
@@ -220,21 +220,21 @@ function clickMe(){
 */
 
 // Print the first 50 fib numbers
-function fib(){     
-    let tNth, tNthMinus1=1, tNthMinus2=0;    
+function fib(){
+    let tNth, tNthMinus1=1, tNthMinus2=0;
     console.log(tNthMinus2);
-    console.log(tNthMinus1);        
-    for(let i=0;i<48;i++){                
+    console.log(tNthMinus1);
+    for(let i=0;i<48;i++){
         tNth = tNthMinus2 + tNthMinus1;
         console.log(tNth);
 
         tNthMinus2 = tNthMinus1;
-        tNthMinus1 = tNth;        
-    }    
+        tNthMinus1 = tNth;
+    }
 }
 // 52 terms
 
-function tableOf3(){    
+function tableOf3(){
     for(let i=0;i<10;i++){
         console.log(3*(i+1));
     }
@@ -245,14 +245,14 @@ function tableOf3(){
     while(<Condition>){
 
     }
-    
+
     function tableOf3WithWhile(){
         let i=1;
-        while(i<=10){        
+        while(i<=10){
             i++;
         }
     }
-    function printSomething(){        
+    function printSomething(){
         let streamLetter = 'a';
         while(streamLetter!='p'){
 
@@ -262,8 +262,8 @@ function tableOf3(){
 */
 
 /*
- Print the type of each element in the array 
- let x = ['a', 'b', 'c', 1, 2, 3, true, false]; 
+ Print the type of each element in the array
+ let x = ['a', 'b', 'c', 1, 2, 3, true, false];
  for(let i=0;i<x.length;i++){
      console.log(typeof x[i]);
  }
@@ -271,29 +271,29 @@ function tableOf3(){
 
 /*
 Arrays as on 21-12-2021
-1. Accessing an element from an array 
+1. Accessing an element from an array
 2. Pushing data/element to an array
 // 4th element arr[3]
 
 let arr = [1,2,3,4,5,6]
 ->make this [2,4,6,8,10,12]
-double elements in the array 
-for(let i=0;i<arr.length;i++) 
+double elements in the array
+for(let i=0;i<arr.length;i++)
     arr[i]*=2;
-        
+
 // Add first 10 natural numbers to an empty array
 let arr = [];
 for(let i=0;i<10;i++){
-    arr.push(i+1)    
+    arr.push(i+1)
 }
 
 let i=1;
-while(i<=10){    
+while(i<=10){
     arr.push(i);
     i++;
 }
 
-// Sum of all elements in the array 
+// Sum of all elements in the array
 let arr = [1,2,3,4,5,6,7,8,9,10]
 let sum =0;
 for(let i=0;i<arr.length;i++){
@@ -309,8 +309,8 @@ for(let i=0;i<arr.length;i++){
     sum+=arr[i];
 }
 
-// ternary 
-// Syntax 
+// ternary
+// Syntax
 // <Condition>?<Statement1>:<Statement2>
 
 let arr = [1,2,3,4,5,6,7,8,9,10]
@@ -324,28 +324,28 @@ if(sum%2==0)
 else
     console.log('odd');
 
-// Array unshift equivalent of push 
+// Array unshift equivalent of push
 let arr = []
 for(let i=0;i<10;i++){
-    arr.unshift(i+1)    
+    arr.unshift(i+1)
 }
-// [10,9,8,7,6,5,4,3,2,1] 
+// [10,9,8,7,6,5,4,3,2,1]
 
 
-// arr = [10,9,8,7,6,5,4,3,2,1] 
+// arr = [10,9,8,7,6,5,4,3,2,1]
 // Remove last 3 elements from the array
-for(let i=0;i<n;i++)    
+for(let i=0;i<n;i++)
         arr.pop();
 
-// shift for removing elements from start        
+// shift for removing elements from start
 
-// Remove 3 elements from both start and end of the array 
+// Remove 3 elements from both start and end of the array
 for(let i=0;i<n;i++){
     arr.shift();
     arr.pop();
 }
 
-// Reverse of an array 
+// Reverse of an array
 let arr = [1,2,3,4,5];
 arr.reverse();
 let arr2=[];
@@ -365,14 +365,14 @@ let arr1 = [1,2,3], arr2 = [4,5,6]
 [1,2,3,4,5,6]
 arr1.concat(arr2);
 
-// Finding an element in the array 
+// Finding an element in the array
 let num = 12;
 let arr = [1,2,3,4,5,11,15,17,18,31];
 let ajay=0;
 for(let i=0;i<arr.length;i++){
-    if(arr[i] === num){          
+    if(arr[i] === num){
         ajay = 1;
-    }    
+    }
 }
 (ajay==0)?console.log('Does not exist'):console.log("Exists");
 
@@ -395,19 +395,19 @@ splice
  Functions
 */
 
-function sayHello(){    
+function sayHello(){
     for(let i=0;i<3;i++)
         console.log("Hello",i);
 }
 // sayHello();
 
-function sayHelloTo(name){    
+function sayHelloTo(name){
     console.log("Hello", name)
 }
 
-function sayHelloToPeople(people){    
+function sayHelloToPeople(people){
     for(let i=0;i<people.length;i++)
-        console.log("Hello", people[i],"!")            
+        console.log("Hello", people[i],"!")
 }
 
 /*
@@ -428,7 +428,7 @@ function printTwoTables(number1, number2){
 
 let multiplyWithMe = 60;
 
-function multiplyTheseTwoNumbers(num1, num2){    
+function multiplyTheseTwoNumbers(num1, num2){
     console.log(multiplyWithMe);
     return num1*num2;
 }
@@ -503,7 +503,7 @@ arr.filter((ele,index) => {
     3. map
     cars.map(car => car.name)
     nums = [1,2,3,4,5] // Multiply each element by 3
-    nums.map(ele => 3*ele)    
+    nums.map(ele => 3*ele)
     Converting original array of numbers to array of objects with value as Mod of 3
     arr.map( (el,i) => ({position:i, value: el%3}))
 
@@ -516,26 +516,26 @@ arr.filter((ele,index) => {
     5. findIndex
     Works exactly like find, returns index instead of element.
 
-    6. some 
+    6. some
     Finding if their is some element which is disvisble by 2
     arr.some(el => el%2==0)
 
     7. every
         arr.every(el => el%2==0) // Checks if every element is even or not
 
-    8. reduce    
+    8. reduce
 
     Has 4 parameters in the callback function
     1. accumulation
     2. element
     3. index
-    4. array 
-    
+    4. array
+
     let initialVal = 0;
     let arr = [1,2,3,4,5]
     // summing up elements
-    
-    const sum = arr.reduce((acc,element) => {       
+
+    const sum = arr.reduce((acc,element) => {
      return (acc+element);
     },initialVal)
 
@@ -544,14 +544,14 @@ arr.filter((ele,index) => {
     // Get all odd elements from an array using reduce
     let arr = [1,2,3,4,5]
     arr.reduce((acc,el) => {
-        if(el%2==1){ 
+        if(el%2==1){
             acc.push(el);   // [1,3]
         }
-       return acc; 
-    }, [])  
+       return acc;
+    }, [])
  */
 /*
-    Closures    
+    Closures
 
     let myGlobalVar = 1;
     function addOne(){
@@ -563,19 +563,19 @@ arr.filter((ele,index) => {
     console.log(myGlobalVar);
 
     function addOneToNumber(num){
-        return num+1;                          
+        return num+1;
     }
     console.log(addOneToNumber(3))
 
     function addNumberToNumber(num1)
-    {    
-        return function (num2) { 
+    {
+        return function (num2) {
             return num1+num2;
         }
-    }    
-    const addNumberToNumber = (num1) =>  (num2) => num1+num2;  
-    
-    addNumberToNumber(10)// function 
+    }
+    const addNumberToNumber = (num1) =>  (num2) => num1+num2;
+
+    addNumberToNumber(10)// function
     addNumberToNumber(10)(12)
 
 
@@ -593,13 +593,13 @@ arr.filter((ele,index) => {
             console.log("Hello", name);
         }
         displayHello();
-    }   
+    }
 
    function sayHello(){
         let name = "Amit";
         return function (){
             console.log("Hello", name);
-        }        
+        }
     }
     // lexical/block (let/const)
     // functional scope (var)
@@ -636,7 +636,7 @@ arr.filter((ele,index) => {
 
     // Create a function which returns a random value between a & b
 
-    function getRandomBetween(a,b){        
+    function getRandomBetween(a,b){
 
     }
 
@@ -755,8 +755,8 @@ function createCar(color, size, engine){
     return {
         color,
         size:size,
-        engine,            
-    };    
+        engine,
+    };
 }
 
 // Applying default properties
@@ -764,18 +764,18 @@ function createCar(color, size, engine, applyAutoBreaks){
     return {
         color,
         size:size,
-        engine,    
+        engine,
         drive: () => console.log('drive'),
         horn: () => console.log('Peep-peep'),
         applyAutoBreaks
-    };    
+    };
 }
 
 // constructor function
-function car(color, size, engine){             
+function car(color, size, engine){
     this.color = color;
     this.size = size;
-    this.engine = engine                    
+    this.engine = engine
 }
 
 
@@ -783,17 +783,17 @@ function car(color, size, engine){
 
 // constructor function
 // 1st use-case of "this"
-function car(color, size, engine){ 
-    // this = {}             
+function car(color, size, engine){
+    // this = {}
     this.color = color;
     this.size = size;
-    this.engine = engine            
+    this.engine = engine
     // return this
 }
 
 const car = {
   color: "red",
-  fuel : 10,  
+  fuel : 10,
   drive() {
     console.log(this);// "this" here refers to owning object
   }
@@ -801,7 +801,7 @@ const car = {
 
 const car = {
   color: "red",
-  fuel : 10,  
+  fuel : 10,
   drive() {
     this.fuel = this.fuel-1;
     console.log("Fuel reduced to", this.fuel)
@@ -885,6 +885,71 @@ convertFirstCharToUpper('parikshit')
 - Template literal :`The day has ${24*60*60} seconds`
  */
 
+/*
+    BOM (browser object model)
+    DOM (Document object model)
+    - Accessing/Getting/Selecting DOM nodes
+    > byID: document.getElementById
+    > byClass: document.getElementsByClassName
+    > byTagName: document.getElementsByTagName
+    > byQuery: document.querySelector(gives single element selected by query)
+    || document.querySelectorAll(gives all
+ elements selected by query)
+
+ let t = null;
+ console.log(t)
+
+Appending a DOM node to gridParent Div
+
+let newDiv = document.createElement('div')
+newDiv
+newDiv.innerText = 'Item 4'
+'Item 4'
+newDiv
+newDiv.getAttribute('class')
+newDiv.setAttribute('class','gridChild')
+<div class=​"gridChild">​Item 4​</div>​
+document.getElementsByClassName('gridParent')
+HTMLCollection [div.gridparent]
+document.getElementsByClassName('gridParent')[0]
+let parentDiv = document.getElementsByClassName('gridParent')[0]
+parentDiv.appendChild(newDiv)
+document.getElementsByClassName('gridParent')
+document.getElementsByClassName('gridParent')[0]
+<div class=​"gridParent">​…​</div>​ grid 
+
+function renderGridNodes(numberOfNodesToRender){
 
 
+}
 
+renderGridNodes(9)
+ */
+
+function checkMe(){    
+    const valueOfInput = document.getElementsByTagName('input')[0].value;
+    if(valueOfInput === ''){
+        document.getElementById('heading').innerText = "Error"
+        document.getElementById('heading').style.color = 'red'
+        return;
+    }
+    const numericValue = Number(valueOfInput);    
+    if(numericValue%2 === 0){
+        document.getElementById('heading').innerText = "Yes"
+        document.getElementById('heading').style.color = 'green'
+    }
+   else{
+        document.getElementById('heading').innerText = "No"
+        document.getElementById('heading').style.color = 'red'
+   } 
+}
+
+
+/*
+
+    Event listeners in DOM
+    // Click listener    
+document.getElementsByClassName('gridParent')[0].addEventListener('click', _ =>  {
+  console.log("Div clicked")
+})
+*/
