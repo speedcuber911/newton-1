@@ -459,7 +459,7 @@ true -> 1
 
 */
 
-mirrorMaze(mirror, "Tarun")
+// mirrorMaze(mirror, "Tarun")
 function mirrorMaze(mirrorMe, normalString){
 
     console.log("Reverse of", normalString, "is", mirrorMe(normalString))
@@ -468,8 +468,8 @@ let mirror = (str) => (str.split('').reverse().join(''))
 function mirrorMaze(mirrorMe, siddiq){
     console.log("Reverse of", siddiq, "is", mirrorMe(siddiq))
 }
-mirrorMaze(mirror, "Tarun")
-mirror('mayank')
+// mirrorMaze(mirror, "Tarun")
+// mirror('mayank')
 
 /*
     Functions of an object OR, keys of an object which are functions are called methods
@@ -944,7 +944,6 @@ function checkMe(){
    } 
 }
 
-
 /*
 
     Event listeners in DOM
@@ -953,3 +952,64 @@ document.getElementsByClassName('gridParent')[0].addEventListener('click', _ => 
   console.log("Div clicked")
 })
 */
+
+/*
+ DOM events
+// Mouse Listners
+// KeyBoard events
+// Touch events
+// Window events
+
+document.getElementsByClassName('gridParent')[0].addEventListener('click', () => {
+ document.getElementsByClassName('gridParent')[0].innerText = "I was clicked"   
+}) // Changing the inner text of a div
+*/
+
+
+console.log("Hi")
+const myButton = document.getElementById('button');
+let mouseEnabled = true;
+const flipSwitch = () => mouseEnabled = !mouseEnabled
+const divContainer = document.getElementsByClassName('gridParent')[0];
+//code 1
+
+
+
+const mouseEnterHandler = () => { console.log('enter');divContainer.innerText = 'Mouse on me'}
+const mouseOutHandler = () => { console.log('left');divContainer.innerText = 'Mouse not on me!'};
+
+
+myButton.addEventListener('click', () => {
+    console.log("Running")
+    const heading = document.getElementById('heading')
+    if(mouseEnabled)//
+        {
+        myButton.innerText = "Disable Mouse"    
+        flipSwitch();               
+        heading.innerText = heading.innerText.replace('Enabled', 'Disabled')
+        divContainer.addEventListener('mouseenter', mouseEnterHandler);
+        divContainer.addEventListener('mouseout', mouseOutHandler)
+        }
+    else
+       {
+           myButton.innerText = "Enable Mouse"   
+           flipSwitch();                
+           heading.innerText = heading.innerText.replace('Disabled','Enabled')
+           divContainer.removeEventListener('mouseenter', mouseEnterHandler)
+           divContainer.removeEventListener('mouseout', mouseOutHandler)
+        }
+});
+
+/*
+myButton.addEventListener('click', () => {        
+    myButton.innerText = switchButton?"Disable Mouse":"Enable Mouse";                
+    flipSwitch();       
+});
+*/
+
+
+
+
+
+
+
