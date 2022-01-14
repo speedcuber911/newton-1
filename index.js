@@ -16,48 +16,48 @@
 //   console.log(c);
 // }
 
-function doSomething(){
-    let a;
-    a = 5;
+function doSomething() {
+  let a;
+  a = 5;
 
-    var c;
-    c = 7;
-    // Equal sign '=' is called assignment operator
+  var c;
+  c = 7;
+  // Equal sign '=' is called assignment operator
 
-    // Arithematic operators
-    let product  = c*a;
-    let sum  = c+a;
-    let difference  = c-a;
-    let multiplier  = c/a;
+  // Arithematic operators
+  let product = c * a;
+  let sum = c + a;
+  let difference = c - a;
+  let multiplier = c / a;
 
-    let b = 1;
-    b = b+1;
-    // console.log(product, sum, difference, multiplier)
+  let b = 1;
+  b = b + 1;
+  // console.log(product, sum, difference, multiplier)
 
-    // Expressions
-    let expressionVal = 5*b+sum-product;
-    console.log(expressionVal)
+  // Expressions
+  let expressionVal = 5 * b + sum - product;
+  console.log(expressionVal);
 
-    let firstName = 'Parikshit';
-    let secondName = 'nkasn';
+  let firstName = "Parikshit";
+  let secondName = "nkasn";
 
-    // String concatenation
-    let resultString = firstName + "-" + secondName;
-    console.log(resultString)
+  // String concatenation
+  let resultString = firstName + "-" + secondName;
+  console.log(resultString);
 }
 
-function variables(){
-    // var name; // declaring
-    // name = 'Gaurav' // Assigning
-    var name  = "Gaurav";
-    console.log(name) //
-    var firstName = "FirstName",
-    secondName="SecondName",
+function variables() {
+  // var name; // declaring
+  // name = 'Gaurav' // Assigning
+  var name = "Gaurav";
+  console.log(name); //
+  var firstName = "FirstName",
+    secondName = "SecondName",
     _class = 10;
-    console.log(firstName, secondName, _class);
-    var mySpecialVar;
-    var mySpecialVar = "special";
-    console.log(mySpecialVar)
+  console.log(firstName, secondName, _class);
+  var mySpecialVar;
+  var mySpecialVar = "special";
+  console.log(mySpecialVar);
 }
 /* Let keyword
     1. Cannot be re declared
@@ -170,35 +170,30 @@ Printing the table of 2
 
 let numberOfSingleClicks = 0;
 
-function clickMe(){
-    numberOfSingleClicks++;
+function clickMe() {
+  numberOfSingleClicks++;
 
-    if(numberOfSingleClicks <= 2 || numberOfSingleClicks%2 == 0){
-        document.getElementById('item1').style.color = "green"
-    }
-    else if(numberOfSingleClicks>2 && numberOfSingleClicks <= 6 ){
-        document.getElementById('item1').style.color = "blue"
-    }
-    else if(numberOfSingleClicks >6 && numberOfSingleClicks <= 10){
-        document.getElementById('item1').style.color = "orange"
-    }
-    else if(numberOfSingleClicks > 10){
-        document.getElementById('item1').style.color = "red"
-    }
-    else{
-        console.log("This happened");
-    }
+  if (numberOfSingleClicks <= 2 || numberOfSingleClicks % 2 == 0) {
+    document.getElementById("item1").style.color = "green";
+  } else if (numberOfSingleClicks > 2 && numberOfSingleClicks <= 6) {
+    document.getElementById("item1").style.color = "blue";
+  } else if (numberOfSingleClicks > 6 && numberOfSingleClicks <= 10) {
+    document.getElementById("item1").style.color = "orange";
+  } else if (numberOfSingleClicks > 10) {
+    document.getElementById("item1").style.color = "red";
+  } else {
+    console.log("This happened");
+  }
 
-    if(numberOfSingleClicks%2 == 0){
-        document.getElementById('item1').style.fontWeight = 'bolder';
-    }
-    else{
-        document.getElementById('item1').style.fontWeight = '400';
-    }
+  if (numberOfSingleClicks % 2 == 0) {
+    document.getElementById("item1").style.fontWeight = "bolder";
+  } else {
+    document.getElementById("item1").style.fontWeight = "400";
+  }
 
-    document.getElementById('item1').innerText = "No. of times clicked:" + numberOfSingleClicks;
+  document.getElementById("item1").innerText =
+    "No. of times clicked:" + numberOfSingleClicks;
 }
-
 
 //JS topics covered
 /*
@@ -220,24 +215,26 @@ function clickMe(){
 */
 
 // Print the first 50 fib numbers
-function fib(){
-    let tNth, tNthMinus1=1, tNthMinus2=0;
-    console.log(tNthMinus2);
-    console.log(tNthMinus1);
-    for(let i=0;i<48;i++){
-        tNth = tNthMinus2 + tNthMinus1;
-        console.log(tNth);
+function fib() {
+  let tNth,
+    tNthMinus1 = 1,
+    tNthMinus2 = 0;
+  console.log(tNthMinus2);
+  console.log(tNthMinus1);
+  for (let i = 0; i < 48; i++) {
+    tNth = tNthMinus2 + tNthMinus1;
+    console.log(tNth);
 
-        tNthMinus2 = tNthMinus1;
-        tNthMinus1 = tNth;
-    }
+    tNthMinus2 = tNthMinus1;
+    tNthMinus1 = tNth;
+  }
 }
 // 52 terms
 
-function tableOf3(){
-    for(let i=0;i<10;i++){
-        console.log(3*(i+1));
-    }
+function tableOf3() {
+  for (let i = 0; i < 10; i++) {
+    console.log(3 * (i + 1));
+  }
 }
 
 /* The While loop
@@ -395,50 +392,48 @@ splice
  Functions
 */
 
-function sayHello(){
-    for(let i=0;i<3;i++)
-        console.log("Hello",i);
+function sayHello() {
+  for (let i = 0; i < 3; i++) console.log("Hello", i);
 }
 // sayHello();
 
-function sayHelloTo(name){
-    console.log("Hello", name)
+function sayHelloTo(name) {
+  console.log("Hello", name);
 }
 
-function sayHelloToPeople(people){
-    for(let i=0;i<people.length;i++)
-        console.log("Hello", people[i],"!")
+function sayHelloToPeople(people) {
+  for (let i = 0; i < people.length; i++) console.log("Hello", people[i], "!");
 }
 
 /*
 Write a function which takes a number and prints it's table
 */
 
-function printTable(number, till){
-    for(let i=0;i<till;i++){
-        console.log(number*(i+1));
-    }
+function printTable(number, till) {
+  for (let i = 0; i < till; i++) {
+    console.log(number * (i + 1));
+  }
 }
-function printTwoTables(number1, number2){
-    for(let i=0;i<10;i++){
-        console.log("Number1", number1*(i+1), "Number2", number2*(i+1))
-    }
+function printTwoTables(number1, number2) {
+  for (let i = 0; i < 10; i++) {
+    console.log("Number1", number1 * (i + 1), "Number2", number2 * (i + 1));
+  }
 }
 // printTwoTables(2,3)
 
 let multiplyWithMe = 60;
 
-function multiplyTheseTwoNumbers(num1, num2){
-    console.log(multiplyWithMe);
-    return num1*num2;
+function multiplyTheseTwoNumbers(num1, num2) {
+  // console.log(multiplyWithMe);
+  return num1 * num2;
 }
 /*
     Difference between parameters and arguments
     multiplyTheseTwoNumbers(4,5)
 */
 
-let myProduct = multiplyTheseTwoNumbers(4,5);
-console.log(myProduct);//20
+let myProduct = multiplyTheseTwoNumbers(4, 5);
+// console.log(myProduct);//20
 
 /*
 Typed Coercion
@@ -460,13 +455,12 @@ true -> 1
 */
 
 // mirrorMaze(mirror, "Tarun")
-function mirrorMaze(mirrorMe, normalString){
-
-    console.log("Reverse of", normalString, "is", mirrorMe(normalString))
+function mirrorMaze(mirrorMe, normalString) {
+  console.log("Reverse of", normalString, "is", mirrorMe(normalString));
 }
-let mirror = (str) => (str.split('').reverse().join(''))
-function mirrorMaze(mirrorMe, siddiq){
-    console.log("Reverse of", siddiq, "is", mirrorMe(siddiq))
+let mirror = (str) => str.split("").reverse().join("");
+function mirrorMaze(mirrorMe, siddiq) {
+  console.log("Reverse of", siddiq, "is", mirrorMe(siddiq));
 }
 // mirrorMaze(mirror, "Tarun")
 // mirror('mayank')
@@ -926,22 +920,21 @@ function renderGridNodes(numberOfNodesToRender){
 renderGridNodes(9)
  */
 
-function checkMe(){    
-    const valueOfInput = document.getElementsByTagName('input')[0].value;
-    if(valueOfInput === ''){
-        document.getElementById('heading').innerText = "Error"
-        document.getElementById('heading').style.color = 'red'
-        return;
-    }
-    const numericValue = Number(valueOfInput);    
-    if(numericValue%2 === 0){
-        document.getElementById('heading').innerText = "Yes"
-        document.getElementById('heading').style.color = 'green'
-    }
-   else{
-        document.getElementById('heading').innerText = "No"
-        document.getElementById('heading').style.color = 'red'
-   } 
+function checkMe() {
+  const valueOfInput = document.getElementsByTagName("input")[0].value;
+  if (valueOfInput === "") {
+    document.getElementById("heading").innerText = "Error";
+    document.getElementById("heading").style.color = "red";
+    return;
+  }
+  const numericValue = Number(valueOfInput);
+  if (numericValue % 2 === 0) {
+    document.getElementById("heading").innerText = "Yes";
+    document.getElementById("heading").style.color = "green";
+  } else {
+    document.getElementById("heading").innerText = "No";
+    document.getElementById("heading").style.color = "red";
+  }
 }
 
 /*
@@ -965,40 +958,37 @@ document.getElementsByClassName('gridParent')[0].addEventListener('click', () =>
 }) // Changing the inner text of a div
 */
 
+// const myButton = document.getElementById('button');
+// const divContainer = document.getElementsByClassName('gridParent')[0];
 
-console.log("Hi")
-const myButton = document.getElementById('button');
-let mouseEnabled = true;
-const flipSwitch = () => mouseEnabled = !mouseEnabled
-const divContainer = document.getElementsByClassName('gridParent')[0];
-//code 1
+// let mouseEnabled = false;
+// const flipSwitch = () => mouseEnabled = !mouseEnabled
 
+// //code 1
 
+// const mouseEnterHandler = () => { console.log('enter');divContainer.innerText = 'Mouse on me'}
+// const mouseOutHandler = () => { console.log('left');divContainer.innerText = 'Mouse not on me!'};
 
-const mouseEnterHandler = () => { console.log('enter');divContainer.innerText = 'Mouse on me'}
-const mouseOutHandler = () => { console.log('left');divContainer.innerText = 'Mouse not on me!'};
-
-
-myButton.addEventListener('click', () => {
-    console.log("Running")
-    const heading = document.getElementById('heading')
-    if(mouseEnabled)//
-        {
-        myButton.innerText = "Disable Mouse"    
-        flipSwitch();               
-        heading.innerText = heading.innerText.replace('Enabled', 'Disabled')
-        divContainer.addEventListener('mouseenter', mouseEnterHandler);
-        divContainer.addEventListener('mouseout', mouseOutHandler)
-        }
-    else
-       {
-           myButton.innerText = "Enable Mouse"   
-           flipSwitch();                
-           heading.innerText = heading.innerText.replace('Disabled','Enabled')
-           divContainer.removeEventListener('mouseenter', mouseEnterHandler)
-           divContainer.removeEventListener('mouseout', mouseOutHandler)
-        }
-});
+// myButton.addEventListener('click', () => {
+//     console.log("Running")
+//     const heading = document.getElementById('heading')
+//     if(!mouseEnabled)//
+//         {
+//         myButton.innerText = "Enable Mouse"
+//         flipSwitch();
+//         heading.innerText = heading.innerText.replace('Disabled','Enabled')
+//         divContainer.addEventListener('mouseenter', mouseEnterHandler);
+//         divContainer.addEventListener('mouseout', mouseOutHandler)
+//         }
+//     else
+//        {
+//            myButton.innerText = "Disabled Mouse"
+//            flipSwitch();
+//            heading.innerText = heading.innerText.replace('Enabled', 'Disabled')
+//            divContainer.removeEventListener('mouseenter', mouseEnterHandler)
+//            divContainer.removeEventListener('mouseout', mouseOutHandler)
+//         }
+// });
 
 /*
 myButton.addEventListener('click', () => {        
@@ -1007,9 +997,168 @@ myButton.addEventListener('click', () => {
 });
 */
 
+const gridParent = document.getElementsByClassName("gridParent")[0];
+const outerMostDiv = document.getElementsByClassName("gridChild1")[0];
+const middleDiv = document.getElementsByClassName("gridChild2")[0];
+const innerMostDiv = document.getElementsByClassName("gridChild3")[0];
+const bodyOfHTML = document.getElementsByTagName("body")[0];
+
+// bodyOfHTML.addEventListener('click', (event) => {
+//     console.log("Click on body");
+//     console.log(event.target, event.currentTarget);
+// })
+
+// outerMostDiv.addEventListener('click', (event) => {
+//     // console.log(event.target, event.currentTarget);
+//     console.log("Click on outerMostDiv");
+// })
+
+// outerMostDiv.addEventListener('mouseover', (event) => {
+//     // console.log(event.target, event.currentTarget);
+//     console.log("Mouse on outerDiv");
+// })
+
+// middleDiv.addEventListener('mouseover', () => {
+//     // console.log(event.target, event.currentTarget);
+//     console.log("Mouse on middleDiv");
+// })
+
+// middleDiv.addEventListener('click', (event) => {
+//     // console.log(event.target, event.currentTarget);
+//     console.log("Click on middleDiv");
+// })
+
+// innerMostDiv.addEventListener('click', (event) => {
+//         event.stopPropagation()
+//     console.log("Click on innerMostDiv");
+// })
+
+gridParent.addEventListener("click", (event) => {
+  const heading = document.getElementById("heading");
+  if (event.target === event.currentTarget) {
+    heading.innerText = `Please click only on inner elements!`;
+    return;
+  }
+  const targetText = event.target.innerText;
+  heading.innerText = `Click on: ${targetText}`;
+});
+
+// Principle of bubbling
+
+//Prototype
+
+let animal = {};
+animal.name = "Lion";
+animal.power = 100;
+
+animal.eat = function (foodQuantity) {
+  console.log("Animal eats");
+  this.power += foodQuantity;
+};
+animal.run = function (time) {
+  console.log("Animal runs");
+  this.power -= time;
+};
+animal.rests = function (time) {
+  console.log("Animal is resting");
+  this.power += time;
+};
+
+// Functional instantiation
+function Animal(name, power) {
+  let animal = {};
+
+  animal.name = name;
+  animal.power = power;
+
+  animal.eat = function (foodQuantity) {
+    console.log("Animal eats");
+    this.power += foodQuantity;
+  };
+  animal.run = function (time) {
+    console.log("Animal runs");
+    this.power -= time;
+  };
+  animal.rests = function (time) {
+    console.log("Animal is resting");
+    this.power += time;
+  };
+
+  return animal;
+}
+
+let lion = Animal("Liony", 100);
+let dog = Animal("Doggy", 20);
+
+// Functional instantiation with shared methods
+
+const sharedAnimalMethods = {
+  eat: function (foodQuantity) {
+    console.log("Animal eats");
+    this.power += foodQuantity;
+  },
+  run: function (time) {
+    console.log("Animal runs");
+    this.power -= time;
+  },
+  rests: function (time) {
+    console.log("Animal is resting");
+    this.power += time;
+  },
+};
+
+function AnimalI(name, power){
+  let animal = {};
+  animal.name = name;
+  animal.power = power;
+
+  animal.eat =  sharedAnimalMethods.eat;
+  animal.run =  sharedAnimalMethods.run;
+  animal.rests = sharedAnimalMethods.rests;
+
+  return animal;
+}
+let lionI = AnimalI("Liony", 100);
+let dogI  = AnimalI("Doggy", 20);
+
+// Object.create
+// Creates an object, which delegates to another object on failed lookups
+
+const parent = {
+    name: "Abc",
+    age: 49,
+    nationality: "Indian"
+}
+
+const child = Object.create(parent); // {}
+
+child.name =  "Def";
+child.age=  9;
+
+child.nationality
 
 
+const sharedAnimalMethodsI = {
+  eat: function (foodQuantity) {
+    console.log("Animal eats");
+    this.power += foodQuantity;
+  },
+  run: function (time) {
+    console.log("Animal runs");
+    this.power -= time;
+  },
+  rests: function (time) {
+    console.log("Animal is resting");
+    this.power += time;
+  },
+};
 
+function AnimalII(name, power){
+  let animal = Object.create(sharedAnimalMethods);
+  animal.name = name;
+  animal.power = power;
+  return animal;
+}
 
-
-
+let lionII = AnimalII("Liony", 100);
+let dogII  = AnimalII("Doggy", 20);
