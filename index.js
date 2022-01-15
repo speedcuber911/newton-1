@@ -1154,7 +1154,7 @@ const sharedAnimalMethodsI = {
 };
 
 function AnimalII(name, power){
-  let animal = Object.create(sharedAnimalMethods);
+  let animal = Object.create(sharedAnimalMethodsI);
   animal.name = name;
   animal.power = power;
   return animal;
@@ -1162,3 +1162,97 @@ function AnimalII(name, power){
 
 let lionII = AnimalII("Liony", 100);
 let dogII  = AnimalII("Doggy", 20);
+
+// Prototype
+// Functional property referencing an object is protype
+
+
+// Prototypal instantiation
+
+function AnimalIProto(name, power){
+  let animal = Object.create(AnimalIProto.prototype);
+  animal.name = name;
+  animal.power = power;
+  return animal;
+}
+
+AnimalIProto.prototype.eat= function (foodQuantity) {
+  console.log("Animal eats");
+  this.power += foodQuantity;
+};
+
+AnimalIProto.prototype.run= function (time) {
+  console.log("Animal runs");
+  this.power -= time;
+};
+
+AnimalIProto.prototype.rests =  function (time) {
+  console.log("Animal is resting");
+  this.power += time;
+};
+
+let lionIProto = AnimalIProto("Liony", 100);
+let dogIProto  = AnimalIProto("Doggy", 20);
+
+lionIProto.roar = function () {
+  console.log("lion roars")
+}
+
+dogIProto.bark = function () {
+  console.log("dog barks")
+}
+
+lionIProto.roar()
+lionIProto.eat()
+
+
+
+// Pseudo-classical Instantiation
+function Animal(name, energy){
+  // this = Object.create(Animal.prototype)
+  this.name = name;
+  this.energy = energy;
+  // return this;
+}
+
+Animal.prototype.eat= function (foodQuantity) { 
+  console.log("Animal eats");
+  this.power += foodQuantity;
+};
+
+Animal.prototype.run= function (time) {
+  console.log("Animal runs");
+  this.power -= time;
+};
+
+Animal.prototype.rests =  function (time) {
+  console.log("Animal is resting");
+  this.power += time;
+};
+
+let lion = new Animal('Lion', 100);
+// class
+
+class AnimalC{ //  Syntactical sugar
+  constructor(name, energy){
+    this.name = name;
+    this.energy = energy;
+  }
+
+eat(foodQuantity) { 
+  console.log("Animal eats");
+  this.power += foodQuantity;
+  }
+
+run(time) {
+  console.log("Animal runs");
+  this.power -= time;
+  }
+
+rests(time) {
+  console.log("Animal is resting");
+  this.power += time;
+  }
+}
+
+let lionC = new AnimalC("Lionny", 100);
