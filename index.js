@@ -1231,6 +1231,8 @@ Animal.prototype.rests =  function (time) {
 };
 
 let lion = new Animal('Lion', 100);
+lion.eat(100);
+
 // class
 
 class AnimalC{ //  Syntactical sugar
@@ -1256,3 +1258,159 @@ rests(time) {
 }
 
 let lionC = new AnimalC("Lionny", 100);
+
+
+// Array methods
+
+const myArr = []; //  Syntactical sugar
+const myArr2 = new Array();
+myArr.forEach(x => console.log(x))
+myArr.map(x => console.log(x))
+
+
+class AnimalC{ //  Syntactical sugar
+  constructor(name, energy){
+    this.name = name;
+    this.energy = energy;
+  }
+
+eat(foodQuantity) { 
+  console.log("Animal eats");
+  this.power += foodQuantity;
+  }
+
+run(time) {
+  console.log("Animal runs");
+  this.power -= time;
+  }
+
+rests(time) {
+  console.log("Animal is resting");
+  this.power += time;
+}
+
+static findTopAnimals(animalsArr){
+  return animalsArr.sort( (lion1,lion2) => 
+    (lion2.power - lion1.power)).slice(0,3)
+}
+
+static sayHi(){
+  console.log("I am an Animal class")
+}
+  
+}
+
+// function findTopAnimals(animalsArr){
+//   return animalsArr.sort( (lion1,lion2) => (lion2.power - lion1.power)).slice(0,3)
+// }
+
+// let lionC = new AnimalC("Lionny", 100);
+// let lionD = new AnimalC("Lionny2", 90);
+// let lionE = new AnimalC("Lionny3", 120);
+// let lionF = new AnimalC("Lionny4", 60);
+// AnimalC.findTopAnimals([lionC, lionD, lionE, lionF])
+
+
+// Static using functions
+
+
+function Animal(name, energy){
+  // this = Object.create(Animal.prototype)
+  this.name = name;
+  this.energy = energy;
+  // return this;
+}
+
+Animal.prototype.eat= function (foodQuantity) { 
+  console.log("Animal eats");
+  this.power += foodQuantity;
+};
+
+Animal.prototype.run= function (time) {
+  console.log("Animal runs");
+  this.power -= time;
+};
+
+Animal.prototype.rests =  function (time) {
+  console.log("Animal is resting");
+  this.power += time;
+};
+
+let lionD = new Animal("Lionny2", 90);
+let lionE = new Animal("Lionny3", 120);
+let lionF = new Animal("Lionny4", 60);
+
+Animal.findTopAnimals = function(){
+  // ...s
+}
+Animal.findTopAnimals([lionC, lionD, lionE, lionF]);
+//
+
+
+1. `
+The prototype object will have a constructor property 
+which points to the original function or the
+class that the instance was created from
+`
+2. `Object.getPrototypeOf(lionC) === Animal.prototype;`
+
+// __proto not to be used anymore, older/deprecated way of getting prototype
+
+
+// property1
+// Distinguish, whether the property lies on prototype or the instance itself
+
+//Object.keys()// actual keys not on prototype
+//Object.getPrototypeOf()// keys only on the prototype
+
+// lionC.hasOwnProperty('nameOfProperty')
+// Prototype chain
+
+//checking if it's an instacne of class
+// class AnimalC{
+
+// }
+// lionC 
+// Object.getPrototypeOf(lionC) === Object.getPrototypeOf(AnimalC)
+// lionC instanceOf AnimalC
+
+function Animal(name, energy){
+
+  this.name = name;
+  this.energy = energy
+}
+
+const lionD = Animal("Abc", 100);
+lionD.name
+
+
+
+function Animal(name, energy){    
+  if(this instanceof Animal === false){
+      console.log("Did you miss writing new?")
+      return;
+  }
+  this.name = name;
+  this.energy = energy
+}
+
+const lionD = Animal("Abc", 100);
+
+function Animal(name, energy){    
+  if(this instanceof Animal === false){
+      return new Animal(name, energy);
+  }
+  this.name = name;
+  this.energy = energy
+}
+const lionD = Animal("Abc", 100);
+
+// Creating your own Object.create
+//  child = Object.create(parent)
+
+
+Object.create = function(parentObj){
+  function myFn(){};
+  myFn.prototype = parentObj;
+  return new myFn()  
+}
