@@ -1374,16 +1374,15 @@ class that the instance was created from
 // Object.getPrototypeOf(lionC) === Object.getPrototypeOf(AnimalC)
 // lionC instanceOf AnimalC
 
-function Animal(name, energy){
-
+function Animal(name, energy){  
+  // this = Object.create(Animal.prototype)
   this.name = name;
   this.energy = energy
+  //retur this
 }
 
 const lionD = Animal("Abc", 100);
 lionD.name
-
-
 
 function Animal(name, energy){    
   if(this instanceof Animal === false){
@@ -1408,9 +1407,78 @@ const lionD = Animal("Abc", 100);
 // Creating your own Object.create
 //  child = Object.create(parent)
 
-
 Object.create = function(parentObj){
   function myFn(){};
   myFn.prototype = parentObj;
   return new myFn()  
 }
+
+// Prototype chain & JS inheritance
+
+function Dog(name, energy, breed){
+  this.name = name;
+  this.energy = energy;
+  this.breed = breed;  
+}
+
+
+
+Dog.prototype.eat = function(){}
+Dog.prototype.rests = function(){}
+Dog.prototype.sleep = function(){}
+
+Dog.prototype.bark = function(){}
+
+const tommy = new Dog();
+tommy.eat();
+tommy.bark();
+
+function Cat(name, energy, hairColor){
+  this.name = name;
+  this.energy = energy;
+  this.hairColor = hairColor;      
+}
+Cat.prototype.eat = function(){}
+Cat.prototype.rests = function(){}
+Cat.prototype.sleep = function(){}
+
+Cat.prototype.meow = function(){}
+
+function Animal(name, energy){  
+  this.name = name;
+  this.energy = energy;  
+}
+
+Animal.prototype.eat= function (foodQuantity) { 
+  console.log("Animal eats");
+  this.power += foodQuantity;
+};
+
+Animal.prototype.run= function (time) {
+  console.log("Animal runs");
+  this.power -= time;
+};
+
+Animal.prototype.rests =  function (time) {
+  console.log("Animal is resting");
+  this.power += time;
+};
+
+function Dog(name, energy, breed){
+  // this = Object.create(Dog.prototype) // dog-this {} t  
+  Animal.call(this, name, energy);  
+  this.breed = breed;    
+  // return this (dog-this)
+}
+Dog.prototype = Object.create(Animal.prototype); // {}
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.bark = function() {
+  console.log("Barking")
+};
+
+const tommy = new Dog('tommy', 10, 'Labradoodle')
+tommy.eat();
+
+
+
