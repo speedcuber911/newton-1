@@ -1464,6 +1464,8 @@ Animal.prototype.rests =  function (time) {
   this.power += time;
 };
 
+
+//this
 function Dog(name, energy, breed){
   // this = Object.create(Dog.prototype) // dog-this {} t  
   Animal.call(this, name, energy);  
@@ -1479,6 +1481,122 @@ Dog.prototype.bark = function() {
 
 const tommy = new Dog('tommy', 10, 'Labradoodle')
 tommy.eat();
+
+
+class Animal{ //  Syntactical sugar
+  constructor(name, energy){
+    this.name = name;
+    this.energy = energy;
+  }
+
+eat(foodQuantity) { 
+  console.log("Animal eats");
+  this.power += foodQuantity;
+  }
+
+run(time) {
+  console.log("Animal runs");
+  this.power -= time;
+  }
+
+rests(time) {
+  console.log("Animal is resting");
+  this.power += time;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, energy, breed){
+    super(name, energy); // Animal.call(this, name, energy)
+    this.breed = breed;
+  }
+  bark(){
+    console.log("Barking")
+  }
+}
+//extends
+
+
+// Objects, creating new objects and inheriting properties from other objects
+
+
+// Asynchronous JS
+
+[1,2,3,4,5,6]
+
+// T1: ^
+// T2: ^
+
+// concurrency issues, datastructure corruption
+
+
+// Synchronous or sync task 
+// Asynchony -> Environment, which is providijng this capability 
+
+// Main thread
+
+const task1 = () => {
+  console.log("Ran task1");
+}
+
+const task2 = () => {
+  console.log("Running task2")
+  task1();
+  console.log("Completed task1")
+  console.log("Completed task2")
+}
+
+task2();
+
+// Execution context
+// Call stack
+
+//LIFO Last in first out
+
+
+|__console.log("Running task2")_______| 
+|_task2_______________________________|
+
+|_______console.log("Ran task1");_____|
+
+|_______task1()____________| 
+|_task2_______________________________|
+
+
+|__|
+
+
+const resizeImage = image => {
+  // 
+
+  //
+  return;
+}
+
+const postImage = image => {
+  //  ... Network access
+
+  //
+  return;
+}
+
+const successMessage = () => {
+  console.log("Image resized and uplaoded");
+}
+
+resizeImage(image);
+postImage(image)
+successMessage();
+
+// setTimout
+// setInterval
+
+
+setTimeout(() => {
+    console.log("1")
+}, 2000)
+
+console.log("2")
 
 
 
