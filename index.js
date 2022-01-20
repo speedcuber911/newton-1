@@ -1554,16 +1554,16 @@ task2();
 //LIFO Last in first out
 
 
-|__console.log("Running task2")_______| 
-|_task2_______________________________|
+// |__console.log("Running task2")_______| 
+// |_task2_______________________________|
 
-|_______console.log("Ran task1");_____|
+// |_______console.log("Ran task1");_____|
 
-|_______task1()____________| 
-|_task2_______________________________|
+// |_______task1()____________| 
+// |_task2_______________________________|
 
 
-|__|
+// |__|
 
 
 const resizeImage = image => {
@@ -1588,15 +1588,73 @@ resizeImage(image);
 postImage(image)
 successMessage();
 
+// Computing times in JS
+console.time('timeTaken');
+[...new Array(10**8)].map(el => el);
+console.timeEnd('timeTaken');
+
 // setTimout
 // setInterval
 
 
 setTimeout(() => {
-    console.log("1")
+    console.log("1")    
+  const result = task1();
+  task2(result)
+    // This line
 }, 2000)
 
+
+// [...new Array(10**8)].map(el => el);// 4s
+console.log("HI")
+
+
+document.getElementById('id').addEventListener('click', () => {
+});
+
+// fetch, xmlHTTPRequest. Getting data from a remote server
+
+
+setTimeout(() => {
+  console.log("1")
+}, 0);
+  
 console.log("2")
 
 
 
+
+
+
+
+
+let myId = setInterval( () => {},100);
+
+
+
+let sTId = setTimeout(() => {
+  clearInterval(myId);;
+}, 30*60*1000);
+clearTimeout(sTId);
+
+
+
+function Dog(){  
+
+  this.eat = () => {
+
+  }  
+this.rests = () => {
+    
+  } 
+}
+
+
+let d1 = new Dog()
+let d2 = new Dog()
+let d3 = new Dog()
+
+
+
+// 2
+// 2*10**4 -> 20,000
