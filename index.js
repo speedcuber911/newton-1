@@ -1752,3 +1752,75 @@ Promise.all([waitFor1Second(), waitFor2Seconds(), waitFor3Seconds(), waitFor5Sec
 
 Promise.race([waitFor1Second(), waitFor2Seconds(), waitFor3Seconds(), waitFor5Second()]).then(res => console.log(res))
 
+
+// Closing promises
+// Misc. Spread operator, Currying
+
+async function myFn(){
+  console.log("Before")
+  await waitFor1Second();
+  console.log("After")
+}
+myFn()
+
+
+// try/catch blocks
+
+try{
+  // Possibly error causing code
+}
+catch(err){
+    console.log("Error occurred", err)    
+}
+
+function runMe(){
+  // someCode
+
+  try{
+  t.i
+  } catch(err){
+    console.log("Error occurred, but continuing", err)
+  }
+  console.log("Executing critical code");
+  // Some critical code  
+}
+
+
+// Fetching data with async/await
+// Async/await works on Generator functions
+async function getData(){
+try{
+ let result = await fetch("https://jsonplaceholder.typicode.com/users");
+let jsonData = await result.json()
+console.log(jsonData)
+}catch(err) {
+    console.log("Error occurred",err)
+    return "Failure";
+}
+return "Success";
+}
+getData()
+// Await only works in async functions.
+
+// Spread operator
+// ...
+
+// Rest operator
+// ...  Only happens in function parameters or de-structuring
+
+
+// de-structuring
+// 1. Array De-structuring
+// 2. Object De-structuring
+
+
+const arr = [1,2,3,'hello', 'something']
+const [v1,v2,v3,v4,v5] = arr;
+
+///
+
+const o1 = {"key1": 1, "key2" : [1,2,3], complexKey: "key"} 
+const {key1, key2, complexKey} = o1
+
+const o1 = {"key1": 1, "key2" : [1,2,3], complexKey: "key"} 
+const {key1, key2, complexKey:key3} = o1
